@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+      .name {
+        font-size: 2.5em;
+        margin: 10px 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .title {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+      .Bio {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.7;
+        margin: 15px 0;
+        text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 20px auto;
+        display: block;
+        border: 3px solid #667eea;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .nav {
+        margin-bottom: 30px;
+        text-align: center;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #667eea;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .nav a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+      .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        border-left: 5px solid #667eea;
+      }
+      .section h2 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        color: #667eea;
+      }
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        transition: transform 0.3s ease;
+      }
+      .skill:hover {
+        transform: scale(1.05);
+      }
+      .skill a {
+        color: white;
+        text-decoration: none;
+      }
+      .skill a:hover {
+        text-decoration: underline;
+      }
+      .experience-item {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        border-left: 3px solid #667eea;
+      }
+      .education-item {
+        margin-bottom: 15px;
+        padding: 15px;
+        background: white;
+        border-radius: 8px;
+        border-left: 5px solid #667eea;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .education-header {
+        font-size: 1.1em;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      .education-subtext {
+        font-size: 0.9em;
+        color: #666;
+        margin: 4px 0;
+      }
+      .education-year {
+        font-size: 0.85em;
+        color: #999;
+        margin-top: 8px;
+        font-style: italic;
+      }
+      .info-item {
+        padding: 10px;
+        background: white;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        transition: box-shadow 0.3s ease;
+      }
+      .info-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      .contact-info {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .contact-info a {
+        color: #667eea;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .contact-info a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+      @media (max-width: 600px) {
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav a {
+          display: block;
+          margin: 5px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header" id="about">
+        <img src="myphoto.jpeg" alt="Profile Picture" />
+        <h1 class="name">J Jahnavi</h1>
+        <p class="title">Student</p>
+        <p class="title">
+          AI &amp; ML Enthusiast | Web Developer | Problem Solver
+        </p>
+        <p class="Bio">
+          Aspiring AI/ML Engineer passionate about developing intelligent,
+          data-driven solutions for real-world challenges.
+        </p>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#personal-info">Personal Info</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="section" id="personal-info">
+        <h2>Personal Info</h2>
+        <div class="info-grid">
+          <div class="info-item"><strong>DOB:</strong> October 3, 2006</div>
+          <div class="info-item"><strong>Nationality:</strong> Indian</div>
+          <div class="info-item">
+            <strong>Languages:</strong> Telugu, English
+          </div>
+          <div class="info-item"><strong>Location:</strong> Kuppam</div>
+        </div>
+      </div>
+
+      <div class="section" id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <div class="education-header">
+            <strong>B.Tech in Computer Science Engineering</strong>
+          </div>
+          <div class="education-subtext">Kuppam Engineering College</div>
+          <div class="education-year">2024 - 2028 (91%)</div>
+        </div>
+        <div class="education-item">
+          <div class="education-header">
+            <strong>Intermediate (12th Grade)</strong>
+          </div>
+          <div class="education-subtext">Kuppam Junior College</div>
+          <div class="education-year">2022 - 2024 (94.4%)</div>
+        </div>
+        <div class="education-item">
+          <div class="education-header"><strong>SSC (10th Grade)</strong></div>
+          <div class="education-subtext">Kuppam Public School</div>
+          <div class="education-year">2021 - 2022 (90.3%)</div>
+        </div>
+      </div>
+
+      <div class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill"
+            ><a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              target="_blank"
+              >Java</a
+            ></span
+          >
+          <span class="skill"
+            ><a href="https://www.python.org/" target="_blank">Python</a></span
+          >
+          <span class="skill"
+            ><a href="https://scikit-learn.org/" target="_blank"
+              >Machine Learning</a
+            ></span
+          >
+          <span class="skill"
+            ><a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              >HTML/CSS</a
+            ></span
+          >
+          <span class="skill"
+            ><a href="https://www.mysql.com/" target="_blank">SQL</a></span
+          >
+          <span class="skill"
+            ><a href="https://git-scm.com/" target="_blank">Git</a></span
+          >
+        </div>
+      </div>
+      <div class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <h3>AI-Based Water Leakage Detection</h3>
+            <p>
+              Built using LSTM Autoencoder to detect anomalies in pipeline
+              sensor data.
+            </p>
+            <p><strong>Tech:</strong> Python, TensorFlow, Streamlit</p>
+            <a href="https://waterleak-detection-ai.netlify.app">
+              AI-based Water Pipeline Leakage Detection System</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <div>
+            <strong>📧 Email:</strong>
+            <a href="mailto:jahnavijagannath.edu@gmail.com"
+              >jahnavijagannath.edu@gmail.com</a
+            >
+          </div>
+          <div><strong>📞 Phone:</strong> +91 9110750054</div>
+          <div>
+            <strong>🔗 LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/jahnavi-j-11b3833b2"
+              target="_blank"
+              >linkedin.com/in/jahnavi-j</a
+            >
+          </div>
+          <div>
+            <strong>🐙 GitHub:</strong>
+            <a href="https://github.com/jahnavijagannath" target="_blank"
+              >github.com/jahnavijagannath</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
